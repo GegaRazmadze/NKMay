@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% load static %} 
+{% block body %} 
+{% for product in products %}
+	{% if forloop.counter0|divisibleby:2 %}
+<div class="left__container">
+<div class="pro-price pro-price--left">
+	<div class="pro-price__inner-container pro-price__inner-container--left">
+	<!-- <span class="pro-price-price">{{product.price}}₾</span> -->
+</div>
+</div>
+<div class="pro-text-container">
+		<h3 class="pro-header">{{ product.header }}</h3>
+		<h3 class="pro-headerEng">{{ product.headerEng }}</h3>
+		<h3 class="pro-title">{{ product.title}}</h3>
+		<p class="pro-description">{{ product.description}}</p>
+</div>
+	<img src="{{  product.photo.url }}" alt="product.photo.name" class="pro-photo"/>
+</div>
+
+{% else %}
+<div class="right__container">
+
+	<img src="{{  product.photo.url }}" alt="product.photo.name" class="pro-photo"/>
+	<div class="pro-text-container">
+			<h3 class="pro-header">{{ product.header }}</h3>
+			<h3 class="pro-headerEng">{{ product.headerEng }}</h3>
+			<h3 class="pro-title">{{ product.title}}</h3>
+			<p class="pro-description">{{ product.description}}</p>
+	</div>
+	<div class="pro-price pro-price--right">
+		<div class="pro-price__inner-container pro-price__inner-container--right">
+		<!-- <span class="pro-price-price">{{product.price}}₾</span> -->
+	</div>
+	</div>
+</div>
+	{% endif %}
+{% endfor %} {% endblock %}

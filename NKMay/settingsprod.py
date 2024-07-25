@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'maisi',
         'USER': 'maisiuser',
-        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
+        'PASSWORD': 'maisipassword',
         'HOST': 'localhost',
         'PORT': '5432'
     }

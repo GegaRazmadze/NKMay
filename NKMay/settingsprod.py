@@ -10,12 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+from dotenv import load_dotenv
+load_dotenv(dotenv_path='/webapps/maisi/.env') 
 
 import os
 from pathlib import Path
-from dotenv import load_dotenv
 
-load_dotenv()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -133,3 +133,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+print(f"SECRET_KEY: {SECRET_KEY}")
+print(f"DB_PASSWORD: {os.environ.get('DB_PASSWORD', '')}")

@@ -16,9 +16,6 @@ load_dotenv()
 import os
 from pathlib import Path
 
-print(f"SECRET_KEY: {SECRET_KEY}")
-print(f"DB_PASSWORD: {os.environ.get('DB_PASSWORD', '')}")
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -134,3 +131,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+print(f"chemi")
+print(f"SECRET_KEY: {SECRET_KEY}")
+print(f"DB_PASSWORD: {os.environ.get('DB_PASSWORD', '')}")

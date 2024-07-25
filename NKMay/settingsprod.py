@@ -11,12 +11,13 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from dotenv import load_dotenv
-load_dotenv(dotenv_path='/webapps/maisi/.env') 
+load_dotenv() 
 
 import os
 from pathlib import Path
 
-
+print(f"SECRET_KEY: {SECRET_KEY}")
+print(f"DB_PASSWORD: {os.environ.get('DB_PASSWORD', '')}")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -85,7 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'maisi',
         'USER': 'maisiuser',
-        'PASSWORD': 'maisipassword',
+        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
         'HOST': 'localhost',
         'PORT': '5432'
     }

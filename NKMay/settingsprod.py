@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', '')
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'NKMay',
         'USER': 'maisiuser',
-        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
         'HOST': 'localhost',
         'PORT': ''
     }
@@ -135,4 +135,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 print(f"chemi")
 print(f"SECRET_KEY: {SECRET_KEY}")
-print(f"DB_PASSWORD: {os.environ.get('DB_PASSWORD', '')}")
+print(f"DB_PASSWORD: {os.getenv('DB_PASSWORD')}")

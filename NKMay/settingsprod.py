@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'NKMay.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'NKMay',
+        'NAME': 'maisi',
         'USER': 'maisiuser',
         'PASSWORD': os.environ.get('DB_PASSWORD', ''),
         'HOST': 'localhost',

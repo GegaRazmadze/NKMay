@@ -15,4 +15,4 @@ urlpatterns = [
   path("chusti", views.chusti, name="chusti"),
   path("dispenserebi", views.dispenserebi, name="dispenserebi"),
   path("eliteAlternative", views.eliteAlternative, name="eliteAlternative"),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

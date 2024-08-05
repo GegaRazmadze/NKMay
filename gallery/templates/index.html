@@ -15,13 +15,13 @@
 		<h3 class="pro-title">{{ product.title}}</h3>
 		<p class="pro-description">{{ product.description}}</p>
 </div>
-	<img src="{{  product.photo.url }}" alt="product.photo.name" class="pro-photo"/>
+	<img src="{{  product.photo.url }}" alt="{{  product.photo.url }}" class="pro-photo"/>
 </div>
 
 {% else %}
 <div class="right__container">
 
-	<img src="{{  product.photo.url }}" alt="product.photo.name" class="pro-photo"/>
+	<img src="{{  product.photo.url }}" alt="{{  product.photo.url }}" class="pro-photo"/>
 	<div class="pro-text-container">
 			<h3 class="pro-header">{{ product.header }}</h3>
 			<h3 class="pro-headerEng">{{ product.headerEng }}</h3>

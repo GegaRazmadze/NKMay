@@ -7,7 +7,7 @@ class MyariSaponi(models.Model):
   headerEng = models.CharField(max_length=255, blank=True)
   title = models.CharField(max_length=255)
   description = models.CharField(max_length=255)
-  photo = models.ImageField(upload_to='static/img/MyariSaponi', blank=True)
+  photo = models.ImageField(upload_to='gallery/static/img/MyariSaponi', blank=True)
   def save(self, *args, **kwargs):
     # Check if the instance already exists in the database
     if self.pk:
@@ -33,7 +33,7 @@ class Tsubi(models.Model):
   headerEng = models.CharField(max_length=255, blank=True)
   title = models.CharField(max_length=255)
   description = models.CharField(max_length=255)
-  photo = models.ImageField(upload_to='static/img/Tsubi', blank=True)
+  photo = models.ImageField(upload_to='gallery/static/img/Tsubi', blank=True)
   def save(self, *args, **kwargs):
     # Check if the instance already exists in the database
     if self.pk:
@@ -59,7 +59,7 @@ class PetBotli(models.Model):
   headerEng = models.CharField(max_length=255, blank=True)
   title = models.CharField(max_length=255)
   description = models.CharField(max_length=255)
-  photo = models.ImageField(upload_to='static/img/PetBotli', blank=True)
+  photo = models.ImageField(upload_to='gallery/static/img/PetBotli', blank=True)
   def save(self, *args, **kwargs):
     # Check if the instance already exists in the database
     if self.pk:
@@ -85,7 +85,7 @@ class Chusti(models.Model):
   headerEng = models.CharField(max_length=255, blank=True)
   title = models.CharField(max_length=255)
   description = models.CharField(max_length=255)
-  photo = models.ImageField(upload_to='static/img/Chusti', blank=True)
+  photo = models.ImageField(upload_to='gallery/static/img/Chusti', blank=True)
   def save(self, *args, **kwargs):
     # Check if the instance already exists in the database
     if self.pk:
@@ -111,7 +111,7 @@ class Dispenserebi(models.Model):
   headerEng = models.CharField(max_length=255, blank=True,)
   title = models.CharField(max_length=255)
   description = models.CharField(max_length=255)
-  photo = models.ImageField(upload_to='static/img/Dispenserebi', blank=True)
+  photo = models.ImageField(upload_to='gallery/static/img/Dispenserebi', blank=True)
   def save(self, *args, **kwargs):
     # Check if the instance already exists in the database
     if self.pk:
@@ -138,7 +138,7 @@ class EliteAlternative(models.Model):
   headerEng = models.CharField(max_length=255, blank=True)
   title = models.CharField(max_length=255)
   description = models.CharField(max_length=255)
-  photo = models.ImageField(upload_to='static/img/EliteAlternative', blank=True)
+  photo = models.ImageField(upload_to='gallery/static/img/EliteAlternative', blank=True)
   def save(self, *args, **kwargs):
     # Check if the instance already exists in the database
     if self.pk:

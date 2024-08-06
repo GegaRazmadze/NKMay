@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['138.68.74.176', 'localhost', '127.0.0.1','hojei.com','.hojei.com']
+ALLOWED_HOSTS = ['138.68.74.176', 'localhost', '127.0.0.1','hojei.com','hojei.online']
 
 
 # Application definition

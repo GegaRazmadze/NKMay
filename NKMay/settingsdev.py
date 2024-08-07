@@ -125,5 +125,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_URL = '/gallery/static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
+MEDIA_URL = '/media/'
+MEDIA_ROOT =  BASE_DIR / 'media/'
 
 # print('write this: ......: ', BASE_DIR / 'gallery/static/img',)

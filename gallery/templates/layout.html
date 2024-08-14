@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>{% block title %}MAY / მაისი{% endblock %}</title>
+		<title>{% block title %}MAISI / მაისი{% endblock %}</title>
 		<link rel="shortcut icon" href='{% static "img/LOGO.svg" %}' type="image/x-icon" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,22 +25,22 @@
 					</a>
 					<nav class="user-nav">
 						<div class="user-nav__icon-box">
-							<a class="nav-link"  href="{% url 'index' %}"><span>მყარი საპონი</span></a>
+							<a class="nav-link"  href="{% url 'index' %}"><span>ამენითები</span></a>
 						</div>
 						<div class="user-nav__icon-box">
-							<a class="nav-link" href="{% url 'tsubi' %}"><span>წუბი</span></a>
+							<a class="nav-link" href="{% url 'tavisMovla' %}"><span>თავის მოვლა</span></a>
 						</div>
 						<div class="user-nav__icon-box">
-							<a class="nav-link"  href="{% url 'petBotli' %}"><span>პეტ ბოთლი</span></a>
+							<a class="nav-link"  href="{% url 'saponi' %}"><span>საპონი</span></a>
 						</div>
 						<div class="user-nav__icon-box">
 							<a class="nav-link"  href="{% url 'chusti' %}"><span>ჩუსტი</span></a>
 						</div>
 						<div class="user-nav__icon-box">
-							<a class="nav-link"  href="{% url 'dispenserebi' %}"><span>დისპენსერები</span></a>
+							<a class="nav-link"  href="{% url 'dispenserebi' %}"><span>დისპენსერი</span></a>
 						</div>
 						<div class="user-nav__icon-box">
-							<a class="nav-link"  href="{% url 'eliteAlternative' %}"><span>ელიტური ალტერნატივა</span></a>
+							<a class="nav-link"  href="{% url 'partniorebi' %}"><span>პარტნიორები</span></a>
 						</div>
 					</nav>
 					</nav>
@@ -54,12 +54,12 @@
 				<div class="navigation__background">&nbsp;</div>
 				<nav class="navigation__nav">
 					<ul class="navigation__list">
-						<li class="navigation__item"><a class="navigation__link"  href="{% url 'index' %}"><span>მყარი საპონი</span></a></li>
-						<li class="navigation__item"><a class="navigation__link"   href="{% url 'tsubi' %}"><span>წუბი</span></a></li>
-						<li class="navigation__item"><a class="navigation__link"  href="{% url 'petBotli' %}"><span>პეტ ბოთლი</span></a></li>
+						<li class="navigation__item"><a class="navigation__link"  href="{% url 'index' %}"><span>ამენითები</span></a></li>
+						<li class="navigation__item"><a class="navigation__link"   href="{% url 'tavisMovla' %}"><span>თავის მოვლა</span></a></li>
+						<li class="navigation__item"><a class="navigation__link"  href="{% url 'saponi' %}"><span>საპონი</span></a></li>
 						<li class="navigation__item"><a class="navigation__link"   href="{% url 'chusti' %}"><span>ჩუსტი</span></a></li>
-						<li class="navigation__item"><a class="navigation__link"  href="{% url 'dispenserebi' %}"><span>დისპენსერები</span></a></li>
-						<li class="navigation__item"><a class="navigation__link"  href="{% url 'eliteAlternative' %}"><span>ელიტური ალტერნატივა</span></a></li>
+						<li class="navigation__item"><a class="navigation__link"  href="{% url 'dispenserebi' %}"><span>დისპენსერი</span></a></li>
+						<li class="navigation__item"><a class="navigation__link"  href="{% url 'partniorebi' %}"><span>პარტნიორები</span></a></li>
 					</ul>
 				</nav>
 			</div>

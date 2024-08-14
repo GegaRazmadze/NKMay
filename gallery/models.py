@@ -2,83 +2,83 @@ from django.db import models
 import os
 # Create your models here.
 
-class MyariSaponi(models.Model):
+class Amenitebi(models.Model):
   header = models.CharField(max_length=255)
   headerEng = models.CharField(max_length=255, blank=True)
   title = models.CharField(max_length=255)
   description = models.CharField(max_length=255)
-  photo = models.ImageField(upload_to='MyariSaponi', blank=True)
+  photo = models.ImageField(upload_to='Amenitebi', blank=True)
   def save(self, *args, **kwargs):
     # Check if the instance already exists in the database
     if self.pk:
         try:
-            old_instance = MyariSaponi.objects.get(pk=self.pk)
+            old_instance = Amenitebi.objects.get(pk=self.pk)
             if old_instance.photo and self.photo and old_instance.photo != self.photo:
                 # Delete the old photo if a new photo is being uploaded
                 if os.path.isfile(old_instance.photo.path):
                     os.remove(old_instance.photo.path)
-        except MyariSaponi.DoesNotExist:
+        except Amenitebi.DoesNotExist:
             pass
 
-    super(MyariSaponi, self).save(*args, **kwargs)
+    super(Amenitebi, self).save(*args, **kwargs)
 
   def delete(self, *args, **kwargs):
       if self.photo:
           if os.path.isfile(self.photo.path):
               os.remove(self.photo.path)
-      super(MyariSaponi, self).delete(*args, **kwargs)
+      super(Amenitebi, self).delete(*args, **kwargs)
 
-class Tsubi(models.Model):
+class TavisMovla(models.Model):
   header = models.CharField(max_length=255)
   headerEng = models.CharField(max_length=255, blank=True)
   title = models.CharField(max_length=255)
   description = models.CharField(max_length=255)
-  photo = models.ImageField(upload_to='Tsubi', blank=True)
+  photo = models.ImageField(upload_to='TavisMovla', blank=True)
   def save(self, *args, **kwargs):
     # Check if the instance already exists in the database
     if self.pk:
         try:
-            old_instance = Tsubi.objects.get(pk=self.pk)
+            old_instance = TavisMovla.objects.get(pk=self.pk)
             if old_instance.photo and self.photo and old_instance.photo != self.photo:
                 # Delete the old photo if a new photo is being uploaded
                 if os.path.isfile(old_instance.photo.path):
                     os.remove(old_instance.photo.path)
-        except Tsubi.DoesNotExist:
+        except TavisMovla.DoesNotExist:
             pass
 
-    super(Tsubi, self).save(*args, **kwargs)
+    super(TavisMovla, self).save(*args, **kwargs)
 
   def delete(self, *args, **kwargs):
       if self.photo:
           if os.path.isfile(self.photo.path):
               os.remove(self.photo.path)
-      super(Tsubi, self).delete(*args, **kwargs)
+      super(TavisMovla, self).delete(*args, **kwargs)
 
-class PetBotli(models.Model):
+class Saponi(models.Model):
   header = models.CharField(max_length=255)
   headerEng = models.CharField(max_length=255, blank=True)
   title = models.CharField(max_length=255)
   description = models.CharField(max_length=255)
-  photo = models.ImageField(upload_to='PetBotli', blank=True)
+  photo = models.ImageField(upload_to='Saponi', blank=True)
   def save(self, *args, **kwargs):
     # Check if the instance already exists in the database
     if self.pk:
         try:
-            old_instance = PetBotli.objects.get(pk=self.pk)
+            old_instance = Saponi.objects.get(pk=self.pk)
             if old_instance.photo and self.photo and old_instance.photo != self.photo:
                 # Delete the old photo if a new photo is being uploaded
                 if os.path.isfile(old_instance.photo.path):
                     os.remove(old_instance.photo.path)
-        except PetBotli.DoesNotExist:
+        except Saponi.DoesNotExist:
             pass
 
-    super(PetBotli, self).save(*args, **kwargs)
+    super(Saponi, self).save(*args, **kwargs)
 
   def delete(self, *args, **kwargs):
       if self.photo:
           if os.path.isfile(self.photo.path):
               os.remove(self.photo.path)
-      super(PetBotli, self).delete(*args, **kwargs)
+      super(Saponi, self).delete(*args, **kwargs)
 
 class Chusti(models.Model):
   header = models.CharField(max_length=255)
@@ -133,28 +133,28 @@ class Dispenserebi(models.Model):
       super(Dispenserebi, self).delete(*args, **kwargs)
 
 
-class EliteAlternative(models.Model):
+class Partniorebi(models.Model):
   header = models.CharField(max_length=255)
   headerEng = models.CharField(max_length=255, blank=True)
   title = models.CharField(max_length=255)
   description = models.CharField(max_length=255)
-  photo = models.ImageField(upload_to='EliteAlternative', blank=True)
+  photo = models.ImageField(upload_to='Partniorebi', blank=True)
   def save(self, *args, **kwargs):
     # Check if the instance already exists in the database
     if self.pk:
         try:
-            old_instance = EliteAlternative.objects.get(pk=self.pk)
+            old_instance = Partniorebi.objects.get(pk=self.pk)
             if old_instance.photo and self.photo and old_instance.photo != self.photo:
                 # Delete the old photo if a new photo is being uploaded
                 if os.path.isfile(old_instance.photo.path):
                     os.remove(old_instance.photo.path)
-        except EliteAlternative.DoesNotExist:
+        except Partniorebi.DoesNotExist:
             pass
 
-    super(EliteAlternative, self).save(*args, **kwargs)
+    super(Partniorebi, self).save(*args, **kwargs)
 
   def delete(self, *args, **kwargs):
       if self.photo:
           if os.path.isfile(self.photo.path):
               os.remove(self.photo.path)
-      super(EliteAlternative, self).delete(*args, **kwargs)
+      super(Partniorebi, self).delete(*args, **kwargs)

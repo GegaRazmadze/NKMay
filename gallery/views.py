@@ -1,19 +1,19 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import MyariSaponi, Tsubi, PetBotli, Chusti, Dispenserebi, EliteAlternative
+from .models import Amenitebi, TavisMovla, Saponi, Chusti, Dispenserebi, Partniorebi
 
 
 def index(req):
-  products = MyariSaponi.objects.all()
+  products = Amenitebi.objects.all()
   return render(req, 'index.html', {'products': products})
 
-def tsubi(req):
-  products = Tsubi.objects.all()
+def tavisMovla(req):
+  products = TavisMovla.objects.all()
   return render(req, 'index.html', {'products': products})
 
 
-def petBotli(req):
-  products = PetBotli.objects.all()
+def saponi(req):
+  products = Saponi.objects.all()
   return render(req, 'index.html', {'products': products})
 
 def chusti(req):
@@ -24,6 +24,6 @@ def dispenserebi(req):
   products = Dispenserebi.objects.all()
   return render(req, 'index.html', {'products': products})
 
-def eliteAlternative(req):
-  products = EliteAlternative.objects.all()
+def partniorebi(req):
+  products = Partniorebi.objects.all()
   return render(req, 'index.html', {'products': products})
